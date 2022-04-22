@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALUMBRADO PUBLICO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"> </script>
+</head>
+<body>
+    <div class="container">
+        <div class="contact-box">
+            <div class="left"></div>
+            <div class="right">
+                <h2>Reclamos Alumbrado Publico</h2>
+            <form>
+                <input required type="text" name="nombre" class="field" placeholder="Nombre">
+                <input required type="text" name="ci" class="field" placeholder="Carnet de identidad">
+                <input required type="text" name="telefono" class="field" placeholder="telefono">
+                <input required type="text" name="direccion" class="field" placeholder="direccion">
+                <input required type="text" name="zona" class="field" placeholder="zona">
+                <input required type="text" name="nroposte" class="field" placeholder="Numero de Poste">
+                <input type="hidden" name="lat" class="field" id="latitud" placeholder="latitud">
+                <input type="hidden" name="lng" class="field" id="longitud" placeholder="longitud">
+                <div id="myMap" style="height:300px ;"></div>
+                <p>Arraste el marcador hasta el lugar exacto del problema por favor</p>
+                <input type="hidden" name="fecha" id="fecha">
+                <input type="hidden" name="hora" id="hora">
+                <textarea required class="field area" name="reclamo" placeholder="reclamo"></textarea>
+                <button class="btn" id="btn">Enviar</button>
+            </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <script src="script.js">
+	</script>
+
+</body>
+</html>
